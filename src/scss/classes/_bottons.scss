@@ -1,0 +1,28 @@
+@use "/src/scss/varibles" as *;
+@use "/src/scss/theme" as *;
+@use "../mixins" as *;
+@use "../templates/" as *;
+@use "sass:color";
+$colors: (
+    "yellow": $yellow-500,
+    "green": $green-500,
+    "teal": $teal-500,
+);
+
+@each $colorKey, $colorValue in $colors {
+    .btn-#{$colorKey} {
+        @extend .btn-template;
+        background-color: $colorValue !important;
+        &:hover {
+            background: color.adjust($colorValue, $lightness: $botton-template-lightness) !important;
+        }
+        &-outline {
+            @extend .btn-#{$colorKey};
+            color: $colorValue !important;
+            background-color: transparent !important;
+            &:hover {
+                background: rgba($colorValue, $alpha: $botton-template-alpha) !important;
+            }
+        }
+    }
+}

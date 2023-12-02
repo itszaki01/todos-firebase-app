@@ -1,0 +1,21 @@
+@use "sass:color";
+@use "../templates/" as *;
+@mixin btn-primary($btn-primary-color) {
+    .btn-primary {
+        @extend .btn-template;
+        background-color: $btn-primary-color !important;
+        &:hover {
+            background: color.adjust($btn-primary-color, $lightness: $botton-template-lightness) !important;
+        }
+
+        &-outline {
+            @extend .btn-primary;
+            border: 1px solid $btn-primary-color !important;
+            background-color: rgba(white, $alpha: $botton-template-alpha) !important;
+            color: var(--theme-secondary-reverse);
+            &:hover {
+                background: rgba($btn-primary-color, $alpha: $botton-template-alpha) !important;
+            }
+        }
+    }
+}

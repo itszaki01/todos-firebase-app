@@ -1,0 +1,30 @@
+@use 'sass:color';
+@use '../varibles/' as *;
+//Button Template && Varibles
+$botton-template-lightness: -3%;
+$botton-template-alpha: 0.1;
+
+.btn-template {
+    color: white;
+    outline: none;
+    border: none;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 2.6rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    &:hover {
+        background: color.adjust(white, $lightness: $botton-template-lightness);
+    }
+    &-outline {
+        @extend .btn-template;
+        background-color: transparent;
+        border: 1px solid white;
+        &:hover {
+            background: rgba(white, $alpha: $botton-template-alpha);
+        }
+    }
+
+}

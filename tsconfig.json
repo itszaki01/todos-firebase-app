@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "paths": {
+            "@mantine/core": ["./node_modules/@mantine/core/lib/index.d.ts"],
+            "@mantine/hooks": ["./node_modules/@mantine/hooks/lib/index.d.ts"],
+            "@mantine/notifications": ["./node_modules/@mantine/notifications//lib/index.d.ts"],
+            "@mantine/store": ["./node_modules/@mantine/store//lib/index.d.ts"],
+            "@mantine/modals": ["./node_modules/@mantine/modals//lib/index.d.ts"]
+        },
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}

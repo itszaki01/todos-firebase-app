@@ -1,0 +1,9 @@
+@use "/src/scss/_index.scss" as *;
+
+.todo-container {
+    .mantine-Divider-root {
+        @include mobile-tablet-view{
+            display: none;
+        }
+    }
+}

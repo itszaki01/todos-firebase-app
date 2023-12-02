@@ -1,0 +1,73 @@
+@use "./varibles" as *;
+@use "./mixins/" as *;
+@use "sass:color";
+//Default Light Theme
+:root {
+    --theme-primary: #{$teal-600};
+    --theme-secondary: #{$teal-500};
+    --theme-secondary-reverse: #{$teal-500};
+    --theme-background: #{$gray-200};
+    --theme-background-secondary: #{white};
+    --theme-text: black;
+    --theme-text-secondary: #{$gray-600};
+    --theme-text-reverse: white;
+    @include btn-primary($teal-500); //Btn Primary Color
+    background-color: var(--theme-background); // Body Back Ground Color
+
+    //Colors
+    --theme-color-100: #{$teal-100};
+    --theme-color-200: #{$teal-200};
+    --theme-color-300: #{$teal-300};
+    --theme-color-400: #{$teal-400};
+    --theme-color-500: #{$teal-500};
+    --theme-color-600: #{$teal-600};
+    --theme-color-700: #{$teal-700};
+    --theme-color-800: #{$teal-800};
+    --theme-color-900: #{$teal-900};
+}
+
+//Dark Theme
+.dark-theme {
+    --theme-primary: #{$gray-800};
+    --theme-secondary: #{$gray-600};
+    --theme-secondary-reverse: #{white};
+    --theme-background: #{$zinc-900};
+    --theme-background-secondary: #{$gray-800};
+    --theme-text: white;
+    --theme-text-secondary: #{$gray-400};
+    --theme-text-reverse: #{$gray-800};
+    @include btn-primary($gray-700); //Btn Primary Color
+    background-color: var(--theme-background); // Body Back Ground Color
+
+    //Colors
+    --theme-color-100: #{$gray-100};
+    --theme-color-200: #{$gray-200};
+    --theme-color-300: #{$gray-300};
+    --theme-color-400: #{$gray-400};
+    --theme-color-500: #{$gray-500};
+    --theme-color-600: #{$gray-600};
+    --theme-color-700: #{$gray-700};
+    --theme-color-800: #{$gray-800};
+    --theme-color-900: #{$gray-900};
+}
+
+//Varibles
+$theme-primary: var(--theme-primary);
+$theme-secondary: var(--theme-secondary);
+$theme-secondary-reverse: var(--theme-secondary-reverse);
+$theme-background: var(--theme-background);
+$theme-background-secondary: var(--theme-background-secondary);
+$theme-text: var(--theme-text);
+$theme-text-secondary: var(--theme-text-secondary);
+$theme-text-reverse: var(--theme-text-reverse);
+
+//Colors
+$theme-color-100: var(--theme-color-100);
+$theme-color-200: var(--theme-color-200);
+$theme-color-300: var(--theme-color-300);
+$theme-color-400: var(--theme-color-400);
+$theme-color-500: var(--theme-color-500);
+$theme-color-600: var(--theme-color-600);
+$theme-color-700: var(--theme-color-700);
+$theme-color-800: var(--theme-color-800);
+$theme-color-900: var(--theme-color-900);

@@ -1,0 +1,5 @@
+@use '../varibles/' as *;
+@use '../theme' as *;
+.hr{
+    border-top: 1px solid $theme-text;
+}
